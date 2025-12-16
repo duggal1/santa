@@ -59,7 +59,32 @@ const WhiteButton: React.FC<ButtonProps> = ({ label }) => {
   return (
     <Button
       variant={"ios"}
-      className="h-10 sm:h-12 w-full sm:w-50 text-lg sm:text-base"
+        className="
+              relative  inline-flex items-center justify-center gap-2
+h-10 sm:h-12 px-8 sm:px-6 rounded-full font-medium text-lg sm:text-base whitespace-nowrap
+text-stone-800 bg-white border border-stone-200
+shadow-[inset_0_2px_3px_rgba(255,255,255,0.35)]
+transition-all duration-150 ease-out
+overflow-hidden isolate cursor-pointer group
+before:absolute before:inset-0 before:rounded-full
+before:bg-linear-to-b before:from-white/35 before:to-transparent before:opacity-40
+before:transition-all before:duration-150
+
+hover:bg-stone-200           /* toned-down cranberry */
+hover:before:opacity-65
+hover:shadow-[inset_0_3px_6px_rgba(255,255,255,0.55)]
+
+focus-visible:outline-none
+focus-visible:ring-2
+focus-visible:ring-[#e03636]/60
+
+active:scale-[0.98]
+disabled:pointer-events-none disabled:opacity-50
+
+
+
+                "
+    
     >
       <span className="relative z-10">{label}</span>
       <div className="bg-[#ff5151] text-white size-6 overflow-hidden rounded-full">
@@ -113,7 +138,7 @@ export default function Hero() {
               label={isSignedIn ? "Go to My Christmas" : "Begin With Ease"}
             />
           </Link>
-          <WhiteButton label="Take a Look" />
+          {/* <WhiteButton label="Take a Look" /> */}
         </div>
       </div>
 
