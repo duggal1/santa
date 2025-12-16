@@ -1,0 +1,20 @@
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "binary"
+}
+
+datasource db {
+  provider = "postgresql" // or mysql / sqlite — change if needed
+}
+
+model User {
+  id              String   @id
+  email           String?
+  firstName       String?
+  lastName        String?
+  displayName     String?
+  referralSource  String?
+  onboardingCompleted Boolean @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}

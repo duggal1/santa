@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Black rounded rectangle background -->
+  <rect x="43" y="88" width="426" height="336" rx="80" ry="80" fill="#ffff"/>
+  
+  <!-- White V-shaped envelope flap that doesn't touch the edges -->
+  <path d="M 110 160 L 220 250 Q 256 275, 292 250 L 402 160" 
+        stroke="#000000ff" 
+        stroke-width="50" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"/>
+</svg>

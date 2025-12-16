@@ -1,0 +1,69 @@
+/* =========================================
+   ULTRA LUXURY NATIVE SCROLL
+   Fast. Effortless. Invisible.
+   ========================================= */
+
+html {
+  height: 100%;
+  scroll-behavior: auto;              /* never fake physics */
+  overscroll-behavior-y: none;        /* no rubber-band jank */
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /* Native momentum — sacred */
+  -webkit-overflow-scrolling: touch;
+
+  /* Text clarity = perceived smoothness */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================================
+   Apple-level minimal scrollbar
+   (visible only when needed)
+   ========================================= */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);   /* works in light mode */
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.28);
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.18) transparent;
+}
+
+/* =========================================
+   MOBILE — do absolutely nothing fancy
+   ========================================= */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+}
