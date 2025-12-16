@@ -349,7 +349,7 @@ export default function ChristmasVibeJudge() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="w-full"
+            className="w-full flex flex-col items-center text-center"
           >
             <div className="space-y-6 mb-16">
               <h1 className="text-4xl md:text-5xl mt-8 font-medium tracking-tight text-stone-900 leading-[1.1]">
